@@ -2,7 +2,7 @@ import ProductCard from './ProductCard';
 
 export default function ProductGrid({ products, showAddToCart = true }) {
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3.5 sm:gap-6 lg:grid-cols-4">
       {products.map((product) => (
         <ProductCard
           key={product.id}
@@ -13,4 +13,3 @@ export default function ProductGrid({ products, showAddToCart = true }) {
     </div>
   );
 }
-
