@@ -1,0 +1,402 @@
+# Project: Modern E-Commerce Website
+
+Act as a Senior Frontend Developer and UI/UX Designer. Build a complete, modern, clean, and professional e-commerce website using React.js.
+
+## 1. Technology Stack
+
+Use the following technologies:
+
+- React.js (Vite)
+- JavaScript (ES6+)
+- JSX file extension only (.jsx)
+- React Router  for routing
+- Tailwind CSS for styling
+- React Icons for icons
+- React Hot Toast for notifications (if needed)
+- Fake Store API for product data
+
+API Endpoint:
+https://fakestoreapi.com/products
+
+Product Details API:
+https://fakestoreapi.com/products/{id}
+
+Important:
+- Do not use TypeScript.
+- Do not use Next.js.
+- Do not use unnecessary libraries.
+- Write clean, reusable, maintainable React components.
+- Use functional components and React Hooks.
+
+## 2. Design Requirements
+
+Create a premium-looking e-commerce website with:
+
+- Minimal and clean UI
+- Modern typography
+- Professional color palette
+- White or light background
+- Beautiful spacing and consistent alignment
+- Subtle shadows and rounded corners
+- Smooth hover effects and transitions
+- Professional product cards
+- Responsive design for mobile, tablet, and desktop
+
+Design inspiration: Modern premium online shopping websites.
+
+Avoid:
+- Overly colorful designs
+- Excessive animations
+- Cluttered layouts
+- Unnecessary gradients
+- Generic-looking UI
+
+Make the design visually attractive and production-quality.
+
+## 3. Website Pages
+
+Create the following pages:
+
+### A. Home Page (/)
+
+The homepage should include:
+
+1. Responsive Navbar
+   - Brand logo (create a modern brand name)
+   - Home
+   - Shop
+   - About
+   - Services
+   - Contact
+   - Search icon
+   - Shopping cart icon
+   - Mobile responsive navigation menu
+
+2. Hero Section
+   - Large attractive headline
+   - Short promotional description
+   - Shop Now button
+   - Explore Collection button
+   - Beautiful shopping-related visual
+   - Modern two-column layout
+
+3. Featured Products
+   - Display 4-8 products from the API
+   - Product image
+   - Product title
+   - Price
+   - Rating
+   - View Details button
+
+4. Category Section
+   - Men's Clothing
+   - Women's Clothing
+   - Electronics
+   - Jewelry
+   - Beautiful category cards
+
+5. Promotional Banner
+   - Attractive shopping promotion
+   - Call-to-action button
+
+6. Why Choose Us Section
+   - Free Shipping
+   - Secure Payment
+   - Easy Returns
+   - 24/7 Support
+
+7. Newsletter Subscription Section
+
+8. Professional Footer
+
+### B. All Products Page (/shop)
+
+Display all products fetched from the Fake Store API.
+
+Features:
+- Responsive product grid
+- Product image
+- Product title
+- Price
+- Rating and review count
+- Category
+- View Details button
+- Add to Cart button
+
+Additional functionality:
+- Search products by title
+- Filter products by category
+- Sort by price (Low to High / High to Low)
+- Sort alphabetically
+- Loading state
+- Error state
+- Empty search results state
+
+All filters and search should work properly.
+
+### C. Product Details Page (/product/:id)
+
+When users click the View Details button on any product card, navigate to a dedicated product details page.
+
+Fetch the selected product using:
+https://fakestoreapi.com/products/{id}
+
+Display:
+
+- Large product image
+- Product title
+- Full description
+- Price
+- Category
+- Rating
+- Number of reviews
+- Quantity selector (+ / -)
+- Add to Cart button
+- Buy Now button
+- Back to Shop button
+
+Make the details page visually attractive with a professional two-column layout.
+
+Also include loading and error states.
+
+### D. About Page (/about)
+
+Include:
+- Attractive page hero section
+- About the store
+- Our mission and vision
+- Why customers trust us
+- Professional visual layout
+
+### E. Services Page (/services)
+
+Show service cards for:
+- Fast & Free Delivery
+- Secure Payment
+- Easy Returns & Refunds
+- Customer Support
+- Quality Products
+- Exclusive Offers
+
+Use React Icons for each service.
+
+### F. Contact Page (/contact)
+
+Include:
+- Contact hero section
+- Contact information cards
+- Contact form with:
+  - Full Name
+  - Email
+  - Subject
+  - Message
+- Form validation
+- Success/error toast notification
+
+Since there is no backend, simulate successful form submission. Do not claim that messages are actually sent.
+
+## 4. Shopping Cart Functionality
+
+Implement a functional shopping cart.
+
+Features:
+- Add products to cart
+- Increase/decrease quantity
+- Remove products
+- Display total items
+- Calculate subtotal and total price
+- Empty cart state
+- Cart page (/cart)
+- Continue Shopping button
+- Checkout button (UI only; no real payment integration)
+
+Use React Context API for global cart state.
+
+Persist cart data in localStorage so the cart remains after refreshing the browser.
+
+## 5. Routing Structure
+
+Use React Router  decrative mode routign BrowserRouter Routes Route ok .
+
+Required routes:
+
+- /
+- /shop
+- /product/:id
+- /about
+- /services
+- /contact
+- /cart
+
+Implement:
+- Shared Navbar
+- Shared Footer
+- Proper active navigation links
+- 404 Not Found page
+- Scroll to top when navigating between pages
+
+## 6. Component Architecture
+
+Organize the project with reusable components.
+
+Suggested folder structure:
+
+src/
+  assets/
+  components/
+    Navbar.jsx
+    Footer.jsx
+    Hero.jsx
+    ProductCard.jsx
+    ProductGrid.jsx
+    CategoryCard.jsx
+    ServiceCard.jsx
+    Loading.jsx
+    ErrorMessage.jsx
+    Newsletter.jsx
+  pages/
+    Home.jsx
+    Shop.jsx
+    ProductDetails.jsx
+    About.jsx
+    Services.jsx
+    Contact.jsx
+    Cart.jsx
+    NotFound.jsx
+  context/
+    CartContext.jsx
+  hooks/
+    useProducts.jsx
+  layouts/
+    MainLayout.jsx
+  routes/
+    AppRoutes.jsx
+  App.jsx
+  main.jsx
+  index.css
+
+You can improve the structure if needed.
+
+## 7. API Integration
+
+Use Fake Store API:
+
+All Products:
+https://fakestoreapi.com/products
+
+Single Product:
+https://fakestoreapi.com/products/{id}
+
+Categories:
+https://fakestoreapi.com/products/categories
+
+Requirements:
+- Use fetch or Axios (prefer fetch).
+- Handle loading and error states.
+- Avoid unnecessary duplicate API requests.
+- Use reusable API logic where appropriate.
+- Do not hardcode product information.
+- Dynamically render all product data from the API.
+
+## 8. Responsive Design
+
+Make the entire website fully responsive.
+
+Desktop:
+- Spacious layouts
+- Multi-column product grids
+- Full navigation
+
+Tablet:
+- Adjusted grid columns
+- Balanced spacing
+
+Mobile:
+- Mobile navigation menu
+- 2-column or 1-column product grid depending on available width
+- Properly stacked hero section
+- Responsive product details layout
+- No horizontal overflow
+
+## 9. Code Quality
+
+- Use semantic HTML.
+- Follow clean code principles.
+- Keep components small and reusable.
+- Use meaningful variable and function names.
+- Avoid unnecessary prop drilling.
+- Use React Context for cart management.
+- Keep all components in .jsx files.
+- Ensure there are no console errors.
+- Ensure all buttons and navigation links work.
+- Do not leave unfinished sections or placeholder buttons.
+
+## 10. Final Expectations
+
+Build the complete website, not just a homepage mockup.
+
+Before finishing:
+
+1. Verify all routes.
+2. Test API integration.
+3. Test product search and filtering.
+4. Test product details navigation.
+5. Test add-to-cart functionality.
+6. Test cart quantity updates and removal.
+7. Test localStorage persistence.
+8. Test responsive layouts.
+9. Fix all runtime and console errors.
+
+The final result should look like a professionally designed, modern e-commerce platform with a consistent design system and fully working frontend functionality.
+
+Focus on excellent UI/UX, clean architecture, reusable components, and functional interactions.
+
+## 0. Brand Identity & Logo (IMPORTANT)
+
+The official brand name of this e-commerce website is **NEXORA**.
+
+Use the brand name consistently throughout the entire website.
+
+### Brand Logo
+- Brand name: NEXORA
+- Logo text: NEXORA
+- Tagline: Shop Smarter. Live Better.
+- Create a modern, minimal, premium-looking text-based logo.
+- Use bold typography with a custom shopping-inspired icon from React Icons.
+- Use charcoal/dark text with an orange accent (#F97316).
+- Make the logo clickable and navigate to the homepage (/).
+- Ensure the logo looks excellent on both desktop and mobile.
+
+### Brand Consistency
+
+Use NEXORA in:
+
+1. Navbar logo
+2. Footer logo
+3. Homepage hero section where appropriate
+4. Browser page title and favicon concept
+5. About page brand introduction
+6. Newsletter section
+7. Contact page branding
+8. Any relevant promotional sections
+
+### Footer Branding
+
+The footer must prominently display:
+
+**NEXORA.**
+
+Shop Smarter. Live Better.
+
+Include:
+- Short brand description
+- Quick Links (Home, Shop, About, Services, Contact)
+- Customer Support links
+- Social media icons
+- Copyright text: © 2026 NEXORA. All rights reserved.
+
+### Important Rules
+- Never use a different brand name anywhere.
+- Do not use generic placeholder logos.
+- Maintain consistent brand colors and typography across all pages.
+- The logo should look like a real professional e-commerce brand, not plain default text.
